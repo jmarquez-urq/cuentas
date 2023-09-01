@@ -10,6 +10,10 @@ if ($operacion == "suma") {
 } elseif ($operacion == "multiplicacion") {
     $total = $n1 * $n2;
 } elseif ($operacion == "division") {
-    $total = $n1 / $n2;
+    if ($n2 == 0) {
+        $total = "No se puede dividir por cero";
+    } else {
+        $total = $n1 / $n2;
+    }
 }
 echo $total;
